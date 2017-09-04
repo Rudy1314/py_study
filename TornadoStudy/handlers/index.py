@@ -31,6 +31,7 @@ class IndexHandler(BaseHandler):
 
         if user_infos:
             db_pwd = user_infos[0][2]
+            print('the is pwd the', db_pwd)
             if db_pwd == password:
                 # 不加密的cookie
                 # self.set_cookie(username, db_pwd)

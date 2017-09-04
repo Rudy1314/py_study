@@ -8,16 +8,20 @@
 @file: sleep.py
 @time: 2017/9/4 17:45
 """
+from TornadoStudy.handlers.base import BaseHandler
+import time
 
 
 def func():
     pass
 
 
-class Main():
-    def __init__(self):
-        pass
+class SleepHandler(BaseHandler):
+    def get(self):
+        time.sleep(10)
+        self.render("sleep.html")
 
 
-if __name__ == '__main__':
-    pass
+class SeepHandler(BaseHandler):
+    def get(self):
+        self.render("seep.html")
