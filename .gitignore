@@ -1,4 +1,5 @@
 .idea
 .vagrant
 .idea/workspace.xml
-
+/TornadoStudy/methods/__pycache__/
+/TornadoStudy/handlers/__pycache__/
