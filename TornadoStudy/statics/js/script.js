@@ -13,7 +13,7 @@ $(document).ready(function () {
             cache: false,
             success: function (data) {
                 console.log(data)
-                alert(data);
+                window.location.href = "/user?user=" + data;
             },
             error: function () {
                 alert("error!");

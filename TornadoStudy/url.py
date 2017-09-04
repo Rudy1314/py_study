@@ -10,5 +10,10 @@
 @desc:the url structure of website
 """
 from TornadoStudy.handlers.index import IndexHandler
+from TornadoStudy.handlers.user import UserHandler
 
-url = [(r'/', IndexHandler)]
+url = [
+    (r'/', IndexHandler),
+    (r'/user', UserHandler),
+
+]
