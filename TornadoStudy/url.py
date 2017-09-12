@@ -11,6 +11,7 @@
 """
 from TornadoStudy.handlers.index import IndexHandler
 from TornadoStudy.handlers.user import UserHandler
+from TornadoStudy.handlers.pandasDemo import pandasHandler
 from TornadoStudy.handlers.sleep import SeepHandler, SleepHandler
 
 url = [
@@ -18,5 +19,6 @@ url = [
     (r'/user', UserHandler),
     (r'/seep', SeepHandler),
     (r'/sleep', SleepHandler),
+    (r'/pandas', pandasHandler),
 
 ]

@@ -14,7 +14,6 @@ import tornado.web
 import tornado.escape
 from TornadoStudy.handlers.base import BaseHandler
 
-
 class UserHandler(BaseHandler):
     @tornado.web.authenticated
     def get(self):
