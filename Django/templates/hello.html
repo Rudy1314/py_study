@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+    <p>继承了 base.html 文件</p>
+    <h1>{{ hello }}</h1>
+    <h2>{{ test }}</h2>
+    {% ifequal one 'one1' %}
+        <h3>相等的,{{ one }}</h3>
+        {% else %}
+        <h3>不相等的,{{ one|first|upper }}</h3>
+    {% endifequal %}
+{% endblock %}
