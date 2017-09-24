@@ -55,7 +55,7 @@ from TestModel.models import Test, Contact, Tag
 # admin.site.register([Test])
 
 
-
+# new
 # Register your models here.
 class TagInline(admin.TabularInline):
     model = Tag
