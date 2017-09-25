@@ -15,9 +15,9 @@ from TestModel.models import Test
 
 
 def test_db(request):
-    # test1 = Test(name='runoob')
-    # test1.save()
-    # return HttpResponse("<p>数据添加成功！</p>")
+    test1 = Test(name='runoob')
+    test1.save()
+    return HttpResponse("<p>数据添加成功！</p>")
     # 初始化
 
     response = ''
@@ -35,12 +35,12 @@ def testdb(request):
     list = Test.objects.all()
     # 更新
     # 修改其中一个id=1的name字段，再save，相当于SQL中的UPDATE
-    # test1 = Test.objects.get(id=2)
-    # test1.name = 'Baidu'
-    # test1.save()
-    #
-    # Test.objects.filter(id=1).update(name='Google')
-    # Test.objects.filter(id=3).update(name='Sougou')
+    test1 = Test.objects.get(id=2)
+    test1.name = 'Baidu'
+    test1.save()
+
+    Test.objects.filter(id=1).update(name='Google')
+    Test.objects.filter(id=3).update(name='Sougou')
 
     # 删除id=1的数据
     # test1 = Test.objects.get(id=4)

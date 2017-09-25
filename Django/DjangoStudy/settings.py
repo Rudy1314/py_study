@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'chih',
         'USER': 'root',
         'PASSWORD': 'shopncpw',
-        'HOST': '192.168.56.102',
+        'HOST': '192.168.56.101',
     }
 }
 

@@ -5,7 +5,7 @@
 @desc 数据处理
 @version: ??
 @author: phpergao
-@license: Apache Licence 
+@license: Apache Licence
 @file: pandasDemo.py
 @time: 2017/9/12 0:30
 """
@@ -14,6 +14,9 @@ from TornadoStudy.handlers.base import BaseHandler
 from pandas import Series, DataFrame
 import pandas as pd
 import csv
+import pandas_datareader.data as web
+import datetime
+import matplotlib.pyplot as plt
 
 
 class pandasHandler(BaseHandler):
@@ -21,6 +24,15 @@ class pandasHandler(BaseHandler):
         print(1)
         s = Series([100, 'PYTHON', 'Soochow', 'Qiwsir'], index=['hello', 'world', 'test', 'name'])
         print(s)
+
+
+def isset(v):
+    try:
+        type(eval(v))
+    except:
+        return 0
+    else:
+        return 1
 
 
 s = Series([100, 'PYTHON', 'Soochow', 'Qiwsir'], index=['hello', 'world', 'test', 'name'])
@@ -40,6 +52,18 @@ f1 = DataFrame(data, columns=['name', 'marks', 'price'])
 
 # csv_reader = csv.reader(open("../statics/file/marks.csv"))
 # for row in csv_reader:
-#     print(row)
-marks = pd.read_csv("../statics/file/marks.csv")
-print(marks)
+#     pgitrint(row)
+# marks = pd.read_csv("../statics/file/marks.csv")
+# print(marks)
+startTime = datetime.datetime(2017, 1, 1)
+print('start is ', startTime)
+endTime = datetime.datetime.today()
+print('end is ', endTime)
+px = web.DataReader('F-F_Research_Data_factors', 'famafrench', startTime, endTime)
+# print(px)
+
+test1 = (1,)
+if (test1):
+    print(12)
+else:
+    print(23)
